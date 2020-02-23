@@ -33,7 +33,7 @@ if __name__ == "__main__":
 	try:
 		while True:
 			joyRight, joyLeft = joy.rightY(), joy.leftY()
-			print str(joyLeft) + ", " + str(joyRight)
+			print(str(joyLeft) + ", " + str(joyRight))
 			rightMotor.setSpeed(joyRight)
 			leftMotor.setSpeed(joyLeft)
 			time.sleep(0.1)

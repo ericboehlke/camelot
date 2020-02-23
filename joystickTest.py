@@ -4,5 +4,5 @@ import time
 joy = xbox.Joystick()
 
 while True:
-	print str(joy.rightY()) + ", " + str(joy.leftY())
+	print (str(joy.rightY()) + ", " + str(joy.leftY()))
 	time.sleep(.1)
