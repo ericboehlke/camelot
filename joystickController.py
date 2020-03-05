@@ -18,7 +18,7 @@ class Motor:
 		wiringpi.softPwmWrite(self.speedPin, int(abs(100*speed)))							
 
 
-rightMotorDir = 29
+rightMotorDir = 27
 leftMotorDir = 28
 rightMotorSpeed = 23
 leftMotorSpeed = 26 
