@@ -19,15 +19,20 @@ at_detector = apriltag.Detector()
 while True:
   # Capture a frame from the webcam
   _, frame = cap.read()
-
+  
+  height , width , layers =  frame.shape
+  new_h=height//2
+  new_w=width//2
+  frame = cv2.resize(frame, (new_w, new_h))
   # We need to convert frame to gray scale to be compatible with this library
-  frame_grayscale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+  frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
   # Look for Apriltags in frame
-  tags = at_detector.detect(frame_grayscale)
+  tags = at_detector.detect(frame)
 
   # If we see any...
   if len(tags) != 0:
+    print("here we go!")
     # We can just consider the first tag we see
     tag = tags[0]
 
@@ -40,7 +45,7 @@ while True:
     cv2.polylines(frame, [corners], True, (0, 255, 0), thickness=5)
 
   # Display that frame (resized to be smaller for convenience)
-  cv2.imshow('frame', cv2.resize(frame, (640, 360)))
+  cv2.imshow('frame', frame)
 
   # Quit if user presses q
   if cv2.waitKey(1) & 0xFF == ord('q'):
