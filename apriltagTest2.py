@@ -25,10 +25,10 @@ while True:
   new_w=width//2
   frame = cv2.resize(frame, (new_w, new_h))
   # We need to convert frame to gray scale to be compatible with this library
-  frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+  bw_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
   # Look for Apriltags in frame
-  tags = at_detector.detect(frame)
+  tags = at_detector.detect(bw_frame)
 
   # If we see any...
   if len(tags) != 0:
