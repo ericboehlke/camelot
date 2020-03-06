@@ -270,7 +270,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = '/home/pi/camelot/ros_ws/devel;/opt/ros/melodic'.split(';')
+            CMAKE_PREFIX_PATH = '/home/pi/camelot/ros_ws/devel_isolated/vision_opencv;/home/pi/camelot/ros_ws/devel_isolated/ps3joy;/home/pi/camelot/ros_ws/devel_isolated/opencv_tests;/home/pi/camelot/ros_ws/devel_isolated/joystick_drivers;/home/pi/camelot/ros_ws/devel_isolated/joy;/home/pi/camelot/ros_ws/devel_isolated/apriltag_ros;/home/pi/camelot/ros_ws/devel_isolated/image_geometry;/home/pi/camelot/ros_ws/devel_isolated/cv_bridge;/home/pi/camelot/ros_ws/devel_isolated/camelot;/home/pi/camelot/ros_ws/devel_isolated/apriltag;/opt/ros/melodic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

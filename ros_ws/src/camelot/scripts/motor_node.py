@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import rospy
-
+import wiringpi
 from camelot.msg import DiffDrive 
 
 class Motor:
