@@ -28,7 +28,7 @@ class MotorNode:
         rospy.loginfo("Starting motor_node")
         self.count = 0
         rospy.Subscriber("motor_cmd", DiffDrive, self.drive_callback)
-        rospy.Timer(rospy.Duration(0.1), self.timer_callback)
+        #rospy.Timer(rospy.Duration(0.1), self.timer_callback)
 
     def drive_callback(self, msg):
         self.count = 0
