@@ -43,14 +43,14 @@ class MotorNode:
 
 
 if __name__ == "__main__":
-    rightMotorDir = 27
-    leftMotorDir = 28
-    rightMotorSpeed = 23
-    leftMotorSpeed = 26
+    rightMotorDir = 28
+    leftMotorDir = 27
+    rightMotorSpeed = 26
+    leftMotorSpeed = 23
 
     wiringpi.wiringPiSetup()
-    rightMotor = Motor(rightMotorDir, rightMotorSpeed, 1)
-    leftMotor = Motor(leftMotorDir, leftMotorSpeed, -1)
+    rightMotor = Motor(rightMotorDir, rightMotorSpeed, -1)
+    leftMotor = Motor(leftMotorDir, leftMotorSpeed, 1)
 
     def stop_motors():
         rightMotor.setSpeed(0)

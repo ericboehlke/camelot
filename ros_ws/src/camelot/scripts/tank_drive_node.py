@@ -14,8 +14,8 @@ class TankDriveNode:
 
     def joy_callback(self, joy):
         motor_msg = DiffDrive()
-        motor_msg.r_cmd = joy.axes[4]
-        motor_msg.l_cmd = joy.axes[1]
+        motor_msg.r_cmd = joy.axes[1]
+        motor_msg.l_cmd = joy.axes[3]
 
         self.motor_pub.publish(motor_msg)
 
