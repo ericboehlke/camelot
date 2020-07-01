@@ -1,7 +1,0 @@
-<launch>
-	<include file="$(find camelot)/launch/usb_cam.launch"/>
-	<include file="$(find apriltag_ros)/launch/continuous_detection.launch"/>
-	<node pkg="joy" name="joy_node" type="joy_node"/>
-	<node pkg="camelot" name="motor_node" type="motor_node.py"/>
-	<node pkg="camelot" name="apriltag_follower_node" type="apriltag_follower_node.py" output="screen"/>
-</launch>

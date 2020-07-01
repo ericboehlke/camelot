@@ -1,4 +1,0 @@
-<launch>
-	<include file="$(find camelot)/launch/usb_cam.launch"/>
-	<include file="$(find apriltag_ros)/launch/continuous_detection.launch"/>
-</launch>
