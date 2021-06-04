@@ -13,5 +13,15 @@ This branch is a collection of ROS2 packages containing the source code for Came
 ### Installing ROS2
 - Use these instructions: https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 
+### Setting up I2C for the OLED
+- Connect OLED to I2C pins
+- `sudo apt install i2c-tools python3-pip`
+- Following this guide: https://learn.adafruit.com/monochrome-oled-breakouts/python-setup
+- `sudo pip3 install --upgrade setuptools`
+- `sudo pip3 install adafruit-blinka`
+- `sudo pip3 install adafruit-circuitpython-ssd1306`
+- Run the OLED program with `sudo python3 oled.py`
+- To run on startup add `@reboot /home/ubuntu/oled.py` to the root crontab
+
 ### Connecting to motor controller via UART
 - Helpful link: https://www.raspberrypi.org/documentation/configuration/uart.md
